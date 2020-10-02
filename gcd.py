@@ -2,16 +2,19 @@
 # Eoin Lees
 # Greatest common devider
 
-a = 50
-b = 20
+def gcd(a, b):
 
-while b > 0:
-    '''Python method'''
-    a, b = b, a % b
-    '''Traditional Programming method'''
-#   tmp = a
-#   a = b
-#   b = tmp % b
+    """Returns the greatest commod devisor of a and b"""
+    if a < b:
+        a, b = b, a
+    
+    while b > 0:
+     a, b = b, a % b
 
-print(a)
+    return a
+
+
+print(gcd(50,20))
+print(gcd(22,143))
+
 
